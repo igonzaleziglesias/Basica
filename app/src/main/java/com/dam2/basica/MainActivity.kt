@@ -11,6 +11,7 @@ import android.view.View
 
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
+import org.jetbrains.anko.browse
 import org.jetbrains.anko.design.snackbar
 import org.jetbrains.anko.intentFor
 import org.jetbrains.anko.toast
@@ -55,6 +56,9 @@ class MainActivity : AppCompatActivity() {
         startActivity(intentFor<CambiarColores>("color" to "Amarillo"))
     }
 
+    fun iraInternet(v:View){
+        browse("https://euw.leagueoflegends.com/es/")
+    }
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.menu_main, menu)
